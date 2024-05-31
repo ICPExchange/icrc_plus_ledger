@@ -1,0 +1,37 @@
+[package]
+name = "ic-icrc1-ledger"
+description = "A ledger canister implementing https://github.com/dfinity/ICRC-1 standard"
+version = "0.9.0"
+authors = ["The Internet Computer Project Developers"]
+documentation = "https://internetcomputer.org/docs/"
+edition = "2021"
+
+[[bin]]
+name = "ic-icrc1-ledger"
+path = "src/main.rs"
+
+[dependencies]
+async-trait = "0.1.53"
+candid = { version = "0.10.6" }
+ciborium = "0.2.1"
+hex = "0.4.2"
+ic-base-types ={ git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+ic-canister-log = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+ic-canisters-http-types = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+ic-crypto-tree-hash = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+ic-ledger-hash-of = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+ic-cdk = "0.12.0"
+ic-cdk-macros = "0.8.3"
+ic-icrc1 = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+ic-icrc1-tokens-u256 = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+icrc-ledger-client = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+ic-ledger-canister-core = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+ic-ledger-core = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+ic-metrics-encoder = "1.1.1"
+icrc-ledger-types = { git = "https://github.com/dfinity/ic", rev = "3a34bcbac01f64ba3d80bf2d9c0623b7d466e6a2" }
+num-traits = "0.2.14"
+serde = { version = "1.0", features = ["derive"] }
+serde_bytes = "0.11"
+
+[features]
+default = []
